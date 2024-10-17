@@ -1,0 +1,37 @@
+<?php
+    require_once "templates/layout/header.phtml";
+    require_once "app/controllers/clubes.controller.php";
+    $controller=new ClubesController($this->user);
+?>
+
+    <div class="container textx-center">
+    
+<?php
+    foreach($socios as $socio) :
+    $object=$controller->obtenerClubById($socio->id_club); 
+    $club=$object->club;
+?>
+
+        <ul class="list-group list-group-horizontal mx-5 mt-2">
+            <li class="list-group-item fw-semibold "><a class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover text-info-emphasis " 
+            href="Socios/<?php echo $socio->id_club ?>"><?php echo "Club " . $club ?></a></li>
+            <li class="list-group-item fst-italic" ><?php echo $socio->nombre ?></li>
+            <li class="list-group-item fst-italic"><?php echo $socio->apellido ?></li>
+            <li class="list-group-item fst-italic"><?php echo $socio->dni ?></li>
+            <?php if($this->user) : ?>
+                <div class="actions mx-3">
+                    <a href="eliminarSocio/<?php echo $socio->id_socio ?>" type="button" class='btn btn-danger btn-sm ml-auto'>Eliminar</a>
+                </div>
+                <div class="actions">
+                    <a href="Editar/Socio/<?php echo $socio->id_socio ?>" type="button" class='btn btn-primary btn-sm ml-auto'>Editar</a>
+                </div>
+            <?php endif; ?>
+        </ul>
+
+    
+<?php
+    endforeach ;
+    require_once "templates/layout/footer.phtml";
+?>
+   
+   </div>
