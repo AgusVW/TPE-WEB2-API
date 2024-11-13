@@ -53,7 +53,10 @@
                 INSERT INTO `club` (`id_club`, `club`, `fundacion`, `localidad`, `sede`, `contacto`) VALUES
                 (1, 'Atletico Independiente', '1984-07-12', 'Tandil', 'Avenida Avellaneda 700', 29836474),
                 (2, 'Ferrocarril Sud', '1995-09-22', 'Tandil', 'Avenida Del Valle 157', 24942883),
-                (3, 'Santamarina ', '2024-09-03', 'Tandil', 'Avenida Rivadavia 450', 283999887);
+                (3, 'Santamarina ', '2024-09-03', 'Tandil', 'Avenida Rivadavia 450', 283999887),
+                (9, 'Huracan ', '2024-09-03', 'Tres Arroyos', 'Avenida libertad 450', 283999887),
+                (10, 'Central ', '2024-09-03', 'Vela', 'funghi 54', 241453452),
+                (11, 'Garmense ', '2024-09-03', 'Chavez', 'liniers 240', 2121431);
 
                 -- --------------------------------------------------------
 
@@ -158,7 +161,7 @@
                 -- AUTO_INCREMENT de la tabla `club`
                 --
                 ALTER TABLE `club`
-                MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+                MODIFY `id_club` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
                 --
                 -- AUTO_INCREMENT de la tabla `disciplina`
