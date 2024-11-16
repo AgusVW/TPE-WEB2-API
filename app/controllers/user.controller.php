@@ -37,7 +37,7 @@
                 $payload->email=$userDb->email;
                 $payload->rol='admin';
                 $payload->actividad=time();
-                $payload->expiracion=time()+60;
+                $payload->expiracion=time()+90;
 
                 $token=createJWT($payload);
                 return $this->view->response($token);
